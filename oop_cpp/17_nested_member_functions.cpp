@@ -5,22 +5,23 @@ using namespace std;
 
 class binary
 {
-private:
-    string s;
-    void chk_bin(void);
+    private :
 
-public:
-    void read(void);
-    void ones_compliment(void);
-    void display(void);
+        string s;
+
+        void chk_bin(void);
+
+    public :
+
+        void read(void);
+        void ones_compliment(void);
+        void display(void);
 };
-
 void binary::read(void)
 {
-    cout << "Enter a binary number" << endl;
+    cout << "Enter a binary num : ";
     cin >> s;
 }
-
 void binary::chk_bin(void)
 {
     for (int i = 0; i < s.length(); i++)
@@ -32,39 +33,44 @@ void binary::chk_bin(void)
         }
     }
 }
-
 void binary::ones_compliment(void)
 {
     chk_bin();
+
     for (int i = 0; i < s.length(); i++)
     {
         if (s.at(i) == '0')
         {
             s.at(i) = '1';
         }
-       else
+        else
         {
             s.at(i) = '0';
         }
     }
 }
-
 void binary::display(void)
 {
-    cout<<"Displaying your binary number"<<endl;
+    cout << "Displaying your binary number : " << endl;
+
     for (int i = 0; i < s.length(); i++)
     {
         cout << s.at(i);
     }
-    cout<<endl;
+
+    cout << endl;
 }
 
 int main()
 {
+    // Nesting of member functions
+    // If one member function is called inside the other member function 
+    // of the same class it is called nesting of a member function.
+
+    // Ref : https://www.codewithharry.com/videos/cpp-tutorials-in-hindi-22/
+
     binary b;
     b.read();
-    // b.chk_bin();
-    b.display();
     b.ones_compliment();
     b.display();
 
