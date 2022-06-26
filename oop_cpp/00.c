@@ -1,6 +1,4 @@
-#include <iostream>
-
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
@@ -11,14 +9,12 @@ int main()
 
     // if (d == c)
     // {
-    //     cout << "True";
+    //     printf("%s", "True");
     // }
     // else
     // {
-    //     cout << "False";
+    //     printf("%s", "False");
     // }
-
-    cout << a
 
     return 0;
 }
