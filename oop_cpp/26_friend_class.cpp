@@ -14,9 +14,15 @@ class complex
 
     public :
 
+        complex();
         void set_data(int, int);
         void print_num();
 };
+complex::complex()
+{
+    a = 0;
+    b = 0;
+}
 void complex::set_data(int n1, int n2)
 {
     a = n1;
@@ -45,10 +51,6 @@ int calculator::sum_img(complex i1, complex i2)
 
 int main()
 {
-    // Friend functions are those functions that have the access to private members of the class in which they are
-    // declared. The main thing to note here is that only that function can access the member function which is made a
-    // friend of the other class. An example of the friend function is shown below.
-
     complex p, q;
 
     int p1 = 2;
